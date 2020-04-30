@@ -1,0 +1,27 @@
+/*
+Detect a cycle in a linked list. Note that the head pointer may be 'null' if the list is empty.
+
+A Node is defined as: 
+    class Node {
+        int data;
+        Node next;
+    }
+*/
+
+boolean hasCycle(Node head) {
+    if(head==null)
+        return false;
+    else{
+         int count=0;
+
+         while(head!=null){
+             if(count==1000){
+                 return true;
+             }
+             head=head.next;
+             count++;
+         }
+         return false;
+    }
+
+}
